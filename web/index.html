@@ -1,0 +1,78 @@
+<!doctype html>
+
+<html  ng-app="appModule">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>angular1 highcharts</title>
+  	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!--IE EventSource support using polyfill-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/event-source-polyfill/0.0.9/eventsource.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+	<!-- Angular Material Library -->
+	<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/5.0.1/Rx.js"></script>
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+
+	<script src="app/app.module.js"></script>
+	<script src="app/app.service.js"></script>
+	<script src="app/app.controller.js"></script>
+
+</head>
+
+<body ng-controller="appCtrl">
+
+	<!--try ng-class-->
+	<span ng-class="tryClass(1)">
+		try ng-class 1
+	</span>			
+	<span ng-class="tryClass(2)">
+		try ng-class 2
+	</span>			
+	<span ng-class="tryClass(3)">
+		try ng-class 3
+	</span>	
+	<!--try ng-class over-->	
+	<md-checkbox class="green" ng-model="data.cb1" aria-label="Checkbox 1">
+	Checkbox 1: {{ data.cb1 }}
+	</md-checkbox>	
+	<!--try angularjs material checkbox over-->
+	
+
+	<div id="menu">
+		<ul>
+			<li><input type="checkbox" name="211" id="211" ng-model="channels[211][3]" ng-change="stateChange('211')">
+				<span ng-style="spanStyle(211)" ng-mouseenter="onMouseEnter('211');" ng-mouseleave="onMouseLeave('211');">211</span></li>
+
+			<li><input type="checkbox" name="212" id="212" ng-model="channels[212][3]" ng-change="stateChange('212')">
+				<span ng-style="spanStyle(212)" ng-mouseenter="onMouseEnter('212');" ng-mouseleave="onMouseLeave('212');">212</span></li>
+
+			<li><input type="checkbox" name="213" id="213" ng-model="channels[213][3]" ng-change="stateChange('213')">
+				<span ng-style="spanStyle(213)" ng-mouseenter="onMouseEnter('213');" ng-mouseleave="onMouseLeave('213');">213</span></li>
+
+			<li><input type="checkbox" name="214" id="214" ng-model="channels[214][3]" ng-change="stateChange('214')">
+				<span ng-style="spanStyle(214)" ng-mouseenter="onMouseEnter('214');" ng-mouseleave="onMouseLeave('214');">214</span></li>
+
+			<li><input type="checkbox" name="215" id="215" ng-model="channels[215][3]" ng-change="stateChange('215')">
+				<span ng-style="spanStyle(215)" ng-mouseenter="onMouseEnter('215');" ng-mouseleave="onMouseLeave('215');">215</span></li>
+
+			<li><input type="checkbox" name="216" id="216" ng-model="channels[216][3]" ng-change="stateChange('216')">
+				<span ng-style="spanStyle(216)" ng-mouseenter="onMouseEnter('216');" ng-mouseleave="onMouseLeave('216');">216</span></li>
+		</ul>
+	</div>	
+
+	<div id="container"></div>
+
+</body>
+</html>

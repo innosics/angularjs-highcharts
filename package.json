@@ -1,0 +1,15 @@
+{
+  "name": "alhighchart",
+  "version": "1.0.0",
+  "description": "alhighchart app",
+  "scripts": {
+    "start": "node --use_strict server/app.js"
+  },
+  "dependencies": {
+    "express": "~4.13.1"
+  },
+  "devDependencies": {
+    "@types/node": "^6.0.46"
+  },
+  "author": "Rosy Yang <rosy.yang@gmail.com>"
+}
