@@ -1,7 +1,7 @@
 {
   "name": "alhighchart",
   "version": "1.0.0",
-  "description": "alhighchart app",
+  "description": "angularjs highcharts example",
   "scripts": {
     "start": "node --use_strict server/app.js"
   },
